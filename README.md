@@ -1,6 +1,8 @@
 ### Scan the whole internet for XSS
 
 # webspider.sh -scan
+## emap.py a mass port scanning tool, generates ip's then scans them.
+# python3 emap.py [port] [threads] [output-file] 
 
 ### Whats it do
 
