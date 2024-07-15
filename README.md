@@ -27,3 +27,5 @@ https://github.com/projectdiscovery/httpx
 https://github.com/tomnomnom/gf with https://github.com/1ndianl33t/Gf-Patterns
 
 https://github.com/hahwul/dalfox
+
+https://github.com/tomnomnom/anew
