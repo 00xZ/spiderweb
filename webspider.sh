@@ -38,6 +38,7 @@ main_loop() {
             rm ips.txt
             #echo -e  "$green${BOLD} [+] Spidering [+] ${NC}"
             cat output/targets.txt | httpx -silent | hakrawler | tee spider/spidered.txt
+            cat spider/spidered.txt | anew spider/database.txt
             echo -e  "$magenta${BOLD} [+] GAU [+] ${NC}"
             cat output/targets.txt | gau --subs > spider/wayback.txt
             cat spider/wayback.txt | uro | anew spider/gau_database.txt
