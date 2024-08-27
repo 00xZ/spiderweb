@@ -11,14 +11,15 @@ print("   / __/    / __ `__ \/ __ `/ __ \ ")
 print("  / /___   / / / / / / /_/ / /_/ /")
 print(" /_____/  /_/ /_/ /_/\__,_/ .___/ ")
 print("                         /_/      ")
-print("\n")
+#print("\n")
 print("     github/00xZ - Eyezik")
-print("\n")
-print (" [+] use: emap.py [Port] [Threads] [Output] \n")
+#print("\n")
+#print (" [+] use: emap.py [Port] [Threads] [Output] [Amount of IP's  to find] \n")
 count = 0
 
 
 port = int(sys.argv[1])
+amount2scan = int(sys.argv[4])
 if len(sys.argv) > 2:
     threads = str(sys.argv[2])
 else:
@@ -47,8 +48,8 @@ user_agents = [
 def yadigg():
     global running
     running = (0)
-#    for x in range(50): 
-    while running < 3: #lazy mans thread killing by making tog switch/doesnt need on linux but the windows is fucky
+#    for x in range(50):
+    while running < amount2scan: #lazy mans thread killing by making tog switch/doesnt need on linux but the windows is fucky
             p=random.randint(1,254)
             q=random.randint(1,254)
             r=random.randint(1,254)
@@ -111,6 +112,7 @@ for threads in range(0, int(threads)):
                 t.start()
         except:
                 print('Thread failed: ' + str(count))
-print('Threads: ' + str(count))
-print('Output: ' + output_list)
-print('Port: ' + str(port) + '\n')
+#print('Threads: ' + str(count))
+#print('Output: ' + output_list)
+print('[ /Port: ' + str(port) + ' /Amount: ' + str(amount2scan) +' /Threads: ' + str(count) + ' /Output: ' + output_list+ ' ] \n')
+#print('Amount: ' + str(amount2scan) + '\n')
